@@ -125,3 +125,92 @@ function squareSum(numbers) {
   return suma;
 }
 console.log(squareSum());
+
+//codewars
+//Write a function that removes the spaces from the string, then return the resultant string.
+let nox = "8 j 8   mBliB8g  imjB8B8  jl  B";
+function noSpace(nox) {
+  let result = nox.replaceAll(" ", "");
+  return result;
+}
+console.log(noSpace(nox));
+//codewars
+//Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+//Example: 35231 => [1,3,2,5,3]
+let n = 35231;
+function digitize(n) {
+  //code here
+  //no es un array es numero, primero lo voy a recorrer y separar digito por digito, split es para string no para numeros
+  let resultado = n.toString().split("").reverse().map(Number);
+  console.log(resultado);
+  return resultado;
+}
+console.log(digitize(n));
+
+//codewars
+// Remove First and Last Character Part Two
+/*You are given a string containing a sequence of character sequences separated by commas.
+
+Write a function which returns a new string containing the same character sequences except the first 
+and the last ones but this time separated by spaces.
+
+If the input string is empty or the removal of the first and last items would cause the resulting string to be empty, return an empty value
+ (represented as a generic value NULL in the examples below). 
+
+"1,2,3"      =>  "2"
+"1,2,3,4"    =>  "2 3"
+"1,2,3,4,5"  =>  "2 3 4"
+
+""     =>  NULL
+"1"    =>  NULL
+"1,2"  =>  NULL*/
+//let string = "1,2,3,4,5,6"
+let string = "A,B,C"; //considerar 2 elementos
+//let string = "1" //considerar solo 1 elemento
+function array(string) {
+  // TODO
+  something = string.split(",");
+  console.log(something);
+  if (something.length > 2) {
+    something.shift();
+    something.pop();
+    return something.join(" ");
+  } else {
+    something = null;
+  }
+  return something;
+}
+console.log(array(string));
+
+//codewars
+function getVillainName(birthday) {
+  const m = [
+    "Evil",
+    "Vile",
+    "Cruel",
+    "Trashy",
+    "Despicable",
+    "Embarrassing",
+    "Disreputable",
+    "Atrocious",
+    "Twirling",
+    "Orange",
+    "Terrifying",
+    "Awkward",
+  ];
+  const d = [
+    "Mustache",
+    "Pickle",
+    "Hood Ornament",
+    "Raisin",
+    "Recycling Bin",
+    "Potato",
+    "Tomato",
+    "House Cat",
+    "Teaspoon",
+    "Laundry Basket",
+  ];
+
+  // your code here
+  console.log(m);
+}
