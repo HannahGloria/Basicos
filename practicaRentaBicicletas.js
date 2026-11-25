@@ -98,3 +98,24 @@ for (const { nombre, reserva, esperado } of casos) {
 //   entrega: "TIENDA",
 //   bicicletas: [{ tipo: "URBANA", horas: 0, tarifaPorHora: 40 }],
 // });
+
+const bicicletas = [
+  { id: 1, tipo: "montaña", precioPorHora: 50, disponible: true },
+  { id: 2, tipo: "urbana", precioPorHora: 35, disponible: false },
+  { id: 3, tipo: "urbana", precioPorHora: 40, disponible: true },
+];
+
+const listarDisponibles = () => {
+  return bicicletas.filter((bicicleta) => bicicleta.disponible);
+};
+const listarTipoUrbana = () => {
+  return bicicletas.filter((bicicleta) => bicicleta.tipo === "urbana");
+};
+console.log(listarDisponibles());
+console.log(listarTipoUrbana());
+
+const buscarBicicleta = (id) => {
+  return bicicletas.find((bicicleta) => bicicleta.id === 2);
+};
+console.log(buscarBicicleta());
+//implementar funcion para rentar la bicicleta

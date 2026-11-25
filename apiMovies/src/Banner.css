@@ -1,0 +1,56 @@
+﻿.titleNavbar {
+  color: white;
+}
+
+.movie-banner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  overflow: hidden;
+  border-radius: 24px 24px 24px 4px;
+  background: #defa75;
+  color: #18151e;
+}
+
+.movie-banner__content {
+  justify-content: center;
+  padding: clamp(1.5rem, 4.5vw, 4.75rem);
+}
+
+.movie-banner__content p {
+  max-width: 42ch;
+}
+
+.movie-banner h1.movie-banner__title {
+  font-size: clamp(2.65rem, 6.2vw, 6.5rem);
+  font-weight: 950;
+  line-height: 0.91;
+  letter-spacing: -0.065em;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+}
+
+.movie-banner__media {
+  position: relative;
+  min-height: 22rem;
+  background: #221a2d;
+}
+
+.movie-banner__image {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 699px) {
+  .movie-banner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .movie-banner__media {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+}
